@@ -7,8 +7,11 @@ public class Timer : MonoBehaviour
     public float timeRemaining = 10;
     public static bool timerIsRunning = false;
     public Text timeText;
+    SceneScript sceneScript;
     private void Start()
     {
+        GameObject go = GameObject.Find("end");
+        sceneScript = go.GetComponent<SceneScript>();
         // Starts the timer automatically
         timerIsRunning = true;
     }
@@ -27,6 +30,7 @@ public class Timer : MonoBehaviour
                 Debug.Log("Time has run out!");
                 timeRemaining = 0;
                 timerIsRunning = false;
+                sceneScript.Restart();
             }
         }
     }
@@ -36,5 +40,10 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(timeToDisplay / 60);
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
         timeText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void Stop()
+    {
+        timerIsRunning = false;
     }
 }

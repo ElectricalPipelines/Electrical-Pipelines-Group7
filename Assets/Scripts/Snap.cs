@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class Snap : MonoBehaviour
     public string Zone { get; set; } = "";
 
     public string Index { get; set; } = "";
+    public int ElectricCount { get; set; } = 0;
     public bool IsSnapped { get; set; } = false;
     Vector2 _snapMousePos;
     Transform _snapTarget;

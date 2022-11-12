@@ -118,12 +118,11 @@ public class ElectricTarget : MonoBehaviour
                 }
                 
             }
-            if (zone == "3") Debug.Log(dragPipe.name +" "+ dragPipe);
             if (dragPipe == null) return;
             DragTarget dragTarget = dragPipe.GetComponent<DragTarget>();
             dragTarget.isElectric = isElectric;
             dragTarget.SetSprite();
-            List<Transform> zoneChild = ZoneManagement.getChilderensByName(goZone, "pipe");
+            List<Transform> zoneChild = Utils.getChilderensByName(goZone, "pipe");
             if (zoneChild != null && zoneChild.Count > 0)
             {
                 for (int j = 0; j < zoneChild.Count; j++)

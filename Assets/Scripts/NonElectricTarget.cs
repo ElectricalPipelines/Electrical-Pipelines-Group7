@@ -31,24 +31,24 @@ public class NonElectricTarget : MonoBehaviour
     {
         if (isSnapped)
         {
-            Sprite newSprite = null;
-            if (Name.ToLower().Contains("corner"))
-            {
-                newSprite = SpriteManager.Instance.GetElectricSprite("on_corner");
-            }
-            if (Name.ToLower().Contains("straight"))
-            {
-                newSprite = SpriteManager.Instance.GetElectricSprite("on_straight");
-            }
-            if (Name.ToLower().Contains("tpipe"))
-            {
-                newSprite = SpriteManager.Instance.GetElectricSprite("on_tpipe");
-            }
-            if (Name.ToLower().Contains("cross"))
-            {
-                newSprite = SpriteManager.Instance.GetElectricSprite("on_cross");
-            }
-            spriteR.sprite = newSprite;
+            //Sprite newSprite = null;
+            //if (Name.ToLower().Contains("corner"))
+            //{
+            //    newSprite = SpriteManager.Instance.GetElectricSprite("on_corner");
+            //}
+            //if (Name.ToLower().Contains("straight"))
+            //{
+            //    newSprite = SpriteManager.Instance.GetElectricSprite("on_straight");
+            //}
+            //if (Name.ToLower().Contains("tpipe"))
+            //{
+            //    newSprite = SpriteManager.Instance.GetElectricSprite("on_tpipe");
+            //}
+            //if (Name.ToLower().Contains("cross"))
+            //{
+            //    newSprite = SpriteManager.Instance.GetElectricSprite("on_cross");
+            //}
+            //spriteR.sprite = newSprite;
         }
         if (!isSnapped)
         {

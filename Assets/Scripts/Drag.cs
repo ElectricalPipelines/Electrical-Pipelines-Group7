@@ -9,11 +9,14 @@ public class Drag : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     private Vector3 startPos;
+    private BoxCollider2D collider;
     Vector2 mousePos;
     // Start is called before the first frame update
     void Start()
     {
+        collider = GetComponent<BoxCollider2D>();
         startPos = transform.position;
+        
     }
     
     // Update is called once per frame

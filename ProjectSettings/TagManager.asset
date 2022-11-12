@@ -15,11 +15,13 @@ TagManager:
   - VertPipe
   - CornerPipe
   - End
+  - PreventSnap
+  - PreventElectric
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particle
   - Water
   - UI
   - 
